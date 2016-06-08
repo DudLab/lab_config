@@ -130,7 +130,7 @@
      </item>
     </layout>
    </item>
-   <item row="0" column="0" alignment="Qt::AlignHCenter">
+   <item row="0" column="0">
     <widget class="QLabel" name="label">
      <property name="text">
       <string>&lt;b&gt;Lab Data Configuration Generator&lt;/b&gt;</string>
