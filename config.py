@@ -19,6 +19,7 @@ try:
 except NameError:
     xrange = range
 
+script_dir = os.path.dirname(os.path.abspath(__file__))
 
 class Config(QtGui.QDialog):
     """
@@ -31,10 +32,14 @@ class Config(QtGui.QDialog):
 
         self.config = col.OrderedDict()
 
+        config_ui = os.path.join(
+            script_dir,
+            "config.ui"
+        )
         try:
-            self.ui = QtUiTools.QUiLoader().load("config.ui")
+            self.ui = QtUiTools.QUiLoader().load(config_ui)
         except NameError:
-            self.ui = uic.loadUi("config.ui")
+            self.ui = uic.loadUi(config_ui)
 
         btn_box = self.ui.buttonBox
         ok_btn = btn_box.button(
