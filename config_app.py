@@ -32,14 +32,14 @@ class Config(QtGui.QDialog):
 
         self.config = col.OrderedDict()
 
-        config_ui = os.path.join(
+        config_app_ui = os.path.join(
             script_dir,
-            "config.ui"
+            "config_app.ui"
         )
         try:
-            self.ui = QtUiTools.QUiLoader().load(config_ui)
+            self.ui = QtUiTools.QUiLoader().load(config_app_ui)
         except NameError:
-            self.ui = uic.loadUi(config_ui)
+            self.ui = uic.loadUi(config_app_ui)
 
         btn_box = self.ui.buttonBox
         ok_btn = btn_box.button(
