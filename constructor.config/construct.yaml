@@ -1,0 +1,15 @@
+name: lab_config
+version: "0.1.0"
+
+channels:
+  - http://repo.continuum.io/pkgs/free/
+  - https://conda.anaconda.org/jakirkham
+
+specs:
+  - lab_config
+
+keep_pkgs: true
+
+conda_default_channels:
+  - http://repo.continuum.io/pkgs/free/
+  - https://conda.anaconda.org/jakirkham
